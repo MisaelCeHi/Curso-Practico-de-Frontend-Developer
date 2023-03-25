@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --very-light-pink: #C7C7C7;
+        --text-input-field: #f7f7f7;
+        --hospital-green: #ACD9B2;
+        --white: #FFF;
+        --black: #000;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        font-family: 'Quicksand', sans-serif;
+        height: 100vh;
+      }
+
+      .my-order {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+      .title {
+        font-size: var(--lg);
+        margin-bottom: 40px;
+      }
+      .my-order-container {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        width: 40%;
+      }
+
+      .my-order-content {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cart-product {
+        display: grid;
+        grid-template-columns: auto 1fr auto auto;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+      .cart-product img {
+        width: 70px;
+        height: 70px;
+        border-radius: 20px;
+        object-fit: cover;
+        
+      }
+      .order-detail {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        background-color: var(--text-input-field);
+        border-radius: 8px;
+        gap: 16px;
+        align-items: center;
+        margin-bottom: 24px;
+        padding: 0 24px;
+      }
+      .order-detail p:first-child {
+        display: flex;
+        flex-direction: column;
+      }
+      .order-detail span {
+        margin: 5px 0;
+      }
+      .order-detail p span:first-child {
+        font-size: var(--md);
+        font-weight: bold;
+      }
+      .order-detail p span:nth-child(2) {
+        font-size: var(--sm);
+        color: var(--very-light-pink);
+      }
+      .order-detail p:nth-child(2) {
+        text-align: end;
+        font-weight: bold;
+      }
+
+      .cart-product p:nth-child(2) {
+        color: var(--very-light-pink);
+      }
+      .cart-product p:last-child {
+        font-weight: bold;
+        font-size: var(--md);
+      }
+      @media (max-width:640px) {
+        .my-order-container {
+          width: 90vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="my-order">
+      <div class="my-order-container">
+        <h1 class="title">My order</h1>
+        <div class="my-order-content">
+          <div class="order-detail">
+            <p>
+              <span>04.25.21</span>
+              <span>6 articles</span>
+            </p>
+            <p>
+              $560,00
+            </p>
+          </div>
+
+          <div class="cart-product">
+            <figure>
+              <img src="icons/Planet9_Wallpaper_5000x2813.jpg" alt="product">
+            </figure>
+            <p>Product Name</p>
+            <p>$300.00</p>
+          </div>
+
+          <div class="cart-product">
+            <figure>
+              <img src="icons/Planet9_Wallpaper_5000x2813.jpg" alt="product">
+            </figure>
+            <p>Product Name</p>
+            <p>$300.00</p>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  
+  </body>
+</html>
