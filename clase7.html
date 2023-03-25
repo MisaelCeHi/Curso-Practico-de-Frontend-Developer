@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --very-light-pink: #C7C7C7;
+        --text-input-field: #f7f7f7;
+        --hospital-green: #ACD9B2;
+        --white: #FFF;
+        --black: #000;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        font-family: 'Quicksand', sans-serif;
+      } 
+      .desktop-menu {
+        width: 150px;
+        height: auto;
+        border: 1px solid var(--very-light-pink);
+        border-radius: 6px;
+        padding: 20px 20px 0 20px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+
+      li {
+        text-align: end;
+        font-weight: bold;
+      }
+
+      li:last-child {
+        padding-top: 20px;
+        border-top: 1px solid var(--very-light-pink);
+        font-weight: normal;
+      }
+
+      li:last-child a {
+        color: var(--hospital-green);
+        font-size: var(--sm);
+      }
+
+      a {
+        display: inline-block;
+        margin-bottom: 20px;
+        text-decoration: none;
+        color: var(--black);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="desktop-menu">
+      <ul>
+        <li>
+          <a href="/" class="title">My orders</a>
+        </li>
+        <li>
+         <a href="/">My account</a> 
+        </li>
+        <li>
+          <a href="/">Sign out</a>
+        </li>
+      </ul>
+    </div>
+  
+  </body>
+</html>
