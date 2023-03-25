@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --very-light-pink: #C7C7C7;
+        --text-input-field: #f7f7f7;
+        --hospital-green: #ACD9B2;
+        --white: #FFF;
+        --black: #000;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        font-family: 'Quicksand', sans-serif;
+        height: 100vh;
+      }
+
+      .shopping-cart {
+        position: absolute;
+        right: 0;
+        width: 35%;
+      }
+
+      .title-container {
+        display: flex;
+        margin-bottom: 40px;
+      }
+      .title-container > img {
+        transform: rotate(180deg);
+        margin-right: 14px
+      }
+      .title {
+        font-size: var(--lg);
+        font-weight: bold;
+      }
+
+      .my-order-content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 .5vw;
+      }
+
+      img {
+        cursor: pointer;
+      }
+      .cart-product {
+        display: grid;
+        grid-template-columns: auto 1fr auto auto;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+      .cart-product figure > img {
+        width: 70px;
+        height: 70px;
+        border-radius: 20px;
+        object-fit: cover;
+      }
+      .order-detail {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        background-color: var(--text-input-field);
+        border-radius: 8px;
+        gap: 16px;
+        align-items: center;
+        margin-bottom: 24px;
+        padding: 0 24px;
+        height: 60px;
+      }
+      .order-detail p:first-child {
+        display: flex;
+        flex-direction: column;
+      }
+      .order-detail span {
+        margin: 5px 0;
+      }
+      .order-detail p span:first-child {
+        font-size: var(--md);
+        font-weight: bold;
+      }
+     
+      .order-detail p:nth-child(2) {
+        text-align: end;
+        font-weight: bold;
+      }
+
+      .cart-product p:nth-child(2) {
+        color: var(--very-light-pink);
+      }
+      .cart-product p:nth-child(3) {
+        font-weight: bold;
+        font-size: var(--md);
+      }
+
+      .primary-button {
+        background-color: var(--hospital-green);
+        border-radius: 8px;
+        border: none;
+        color: var(--white);
+        height: 50px;
+        width: 100%;
+        cursor: pointer;
+        font-size: var(--md);
+        font-weight: bold;
+      }
+      @media (max-width:640px) {
+        .shopping-cart {
+          width: 99vw;
+          position: relative;
+        }
+        .title-container{
+          display: none;
+        }
+        body {
+          font-size: var(--sm)!important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <aside class="shopping-cart">
+      <div>
+        <div class="title-container">
+          <img src="icons/flechita.svg" alt="arrow">
+          <p class="title">Shopping Cart</p>
+        </div>
+        <div class="my-order-content">
+          <div class="cart-product">
+            <figure>
+              <img src="icons/Planet9_Wallpaper_5000x2813.jpg" alt="product">
+            </figure>
+            <p>Product Name</p>
+            <p>$300.00</p>
+            <div>
+              <img src="icons/icon_close.png" alt="cancel">
+            </div>
+          </div>
+
+          <div class="cart-product">
+            <figure>
+              <img src="icons/Planet9_Wallpaper_5000x2813.jpg" alt="product">
+            </figure>
+            <p>Product Name</p>
+            <p>$300.00</p>
+            <div>
+              <img src="icons/icon_close.png" alt="cancel">
+            </div>
+          </div>
+          
+          <div class="order-detail">
+            <p>
+              <span>Total</span>
+            </p>
+            <p>
+              $560,00
+            </p>
+          </div>
+          <button type="button" class="primary-button">Checkout</button>
+        </div>
+      </div>
+      
+    </aside>
+  
+  </body>
+</html>
